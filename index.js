@@ -25,11 +25,6 @@ app.use(express.json())
 app.use(fileUpload())
 
 
-app.get("/",(req, resp)=>{
-    console.log("Hello world")
-    resp.send("Hii")
-});
-
 
 app.post("/api",(req, resp)=>{
 
