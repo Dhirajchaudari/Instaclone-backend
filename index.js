@@ -6,9 +6,10 @@ const port = 8080 || process.env.PORT
 const { Post } = require("./models/Scheams");
 const fileUpload = require('express-fileupload');
 const path = require("path")
+const DATABASE_URL = process.env.DATABASE_URL
 
 // mongoose connection
-const url = 'mongodb+srv://Dhiraj:Dhiraj123@cluster0.qwfe1ul.mongodb.net/?retryWrites=true&w=majority'
+const url = DATABASE_URL
 mongoose.set('strictQuery', true)
 mongoose.connect(url, (err)=>{
     if(err){
